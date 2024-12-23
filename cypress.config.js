@@ -18,7 +18,7 @@ module.exports = defineConfig({
       return config;
     },
     specPattern: "cypress/e2e/**/*.feature",
-    //baseUrl: "http://localhost:3000", // Adjust this as needed
+    baseUrl: "https://demowebshop.tricentis.com/", // Adjust this as needed
     supportFile: "cypress/support/e2e.js",
   },
 });
