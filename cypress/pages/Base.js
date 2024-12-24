@@ -18,5 +18,17 @@ class Base {
     verifyURLincludes(text){
         cy.url().should('include', text);    
     }
+
+     isDisplayed(locator){
+        try {
+            cy.get(locator).should('be.visible');
+            return true;
+        } catch (error) 
+        {
+            return false;
+        }
+
+     }
+        
 }
 export default Base;
