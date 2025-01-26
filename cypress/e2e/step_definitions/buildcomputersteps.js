@@ -1,4 +1,4 @@
-const { Given, When, Then, isFeature } = require("@badeball/cypress-cucumber-preprocessor");
+const { Given, When, Then } = require("@badeball/cypress-cucumber-preprocessor");
 import BuildComputer from "../../pages/BuildComputer";
 const buildComputer = new BuildComputer();
 

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "test": "npx cypress run --env allure=true",
+  "allure:report": "allure generate ./cypress/allure-results --clean && allure open"
   },
   "keywords": [],
   "author": "",
@@ -12,15 +13,16 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "@shelex/cypress-allure-plugin": "^2.40.2",
     "cypress": "^13.17.0",
     "cypress-cucumber-preprocessor": "^4.2.0",
     "cypress-xpath": "^2.0.1"
   },
   "cypress-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": false,
+    "nonGlobalStepDefinitions": true,
     "stepDefinitions": "cypress/e2e/step_definitions/*.{js,ts}",
     "html": {
-      "enabled": true,
+      "enabled": false,
       "output": "cypress/reports/cucumber-html/cucumber-report.html"
     }
   }
