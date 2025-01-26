@@ -6,7 +6,7 @@ Feature: shopping product flow
         Then user should go to checkout page
         Then user should fill the checkout form with the following data:
             | product  | FirstName   | LastName   | Email   | Company   | Country   | State   | City   | Address1   | Address2   | ZipCode   | Phone   | Fax   | PO   |
-            | <product | <FirstName> | <LastName> | <Email> | <Company> | <Country> | <State> | <City> | <Address1> | <Address2> | <ZipCode> | <Phone> | <Fax> | <PO> |
+            | <product> | <FirstName> | <LastName> | <Email> | <Company> | <Country> | <State> | <City> | <Address1> | <Address2> | <ZipCode> | <Phone> | <Fax> | <PO> |
         Then user should see the order confirmation page
         Examples:
             | product | FirstName | LastName | Email                  | Company | Country  | State          | City       | Address1 | Address2 | ZipCode | Phone    | Fax  | PO    |
